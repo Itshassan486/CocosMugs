@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cocos Mugs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdf6ee;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 40px 20px 20px;
+    }
+    header img {
+      max-width: 150px;
+    }
+    h1 {
+      margin-top: 10px;
+      font-size: 2.5em;
+      color: #5a3e2b;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .examples {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .example {
+      width: 200px;
+    }
+    .example img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .upload-section {
+      background-color: #fff3e6;
+      padding: 30px;
+      border-radius: 15px;
+      margin: 40px auto;
+      width: 90%;
+      max-width: 500px;
+    }
+    label, select, input[type="file"] {
+      display: block;
+      margin: 15px auto;
+      font-size: 1em;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #5a3e2b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #7a553c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Cocos Mugs Logo" />
+    <h1>Cocos Mugs</h1>
+    <p id="slogan">Comfy to wear, easy on the pocket</p>
+    <!-- You can change the slogan and add description here later -->
+  </header>
+
+  <section>
+    <h2>Before & After Examples</h2>
+    <div class="examples">
+      <div class="example">
+        <p><strong>Before</strong></p>
+        <img src="example-before1.jpg" alt="Before Image 1">
+        <p><strong>After</strong></p>
+        <img src="example-after1.jpg" alt="After Image 1">
+      </div>
+      <div class="example">
+        <p><strong>Before</strong></p>
+        <img src="example-before2.jpg" alt="Before Image 2">
+        <p><strong>After</strong></p>
+        <img src="example-after2.jpg" alt="After Image 2">
+      </div>
+    </div>
+  </section>
+
+  <section class="upload-section">
+    <h2>Customize Your Mug</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="imageUpload">Upload Your Photo</label>
+      <input type="file" id="imageUpload" name="photo" accept="image/*" required>
+
+      <label for="style">Choose Art Style</label>
+      <select id="style" name="style">
+        <option value="original">Keep Original</option>
+        <option value="waterpaint">Waterpaint Art</option>
+        <option value="anime">Anime Art</option>
+      </select>
+
+      <label for="custom">Extra Customizations</label>
+      <select id="custom" name="custom">
+        <option value="none">None</option>
+        <option value="text">Add Custom Text</option>
+        <option value="background">Change Background</option>
+      </select>
+
+      <button type="submit">Preview & Order</button>
+    </form>
+  </section>
+</body>
+</html>
